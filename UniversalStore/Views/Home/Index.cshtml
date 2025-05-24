@@ -1,0 +1,100 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+	<header class="border-2 border-bottom border-black text-center px-2 py-1 mt-5">
+		<h2>Universal Store!</h2>
+	</header>
+	<div class="row mt-3 text-center">
+		<div class="col-6">
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-primary rounded-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+				About This store <i class="bi bi-box"></i>
+			</button>
+
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title fs-5" id="exampleModalLabel">Universal Store</h1>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							This is a Universal Store.
+							You can Add, Edit, Delete Product.
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-6">
+			<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Store Struct <i class="bi bi-card-text"></i></button>
+
+			<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+				<div class="offcanvas-header">
+					<h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Universal Store Struct</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<p class="text-start">This is a Universal Store.</p>
+					<p class="text-start">You can Edit and Delete and Add your product.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="my-div">
+		Universal Store <i class="bi bi-shop-window"></i>
+	</div>
+
+	<div class="col-12 mt-5">
+		<div class="card">
+			<div class="card-header bg-light text-primary">
+				Universal Store <i class="bi bi-arrow-right"></i>
+			</div>
+			<div class="card-body">
+				<figure>
+					<blockquote class="blockquote">
+						<p>Everyone can buy anything easily.</p>
+					</blockquote>
+					<figcaption class="blockquote-footer">
+						Someone that's Want <cite title="Source Title">Can do it.</cite>
+					</figcaption>
+				</figure>
+			<p>Use of Universal Store and enjoy it!</p>
+			<p>Universal is open and free.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+@section Scripts {
+	<script>
+		$(document).ready(function () {
+		  $('#my-div')
+			.fadeIn(500)
+			.delay(2000)       
+			.fadeOut(800);      
+		});
+	</script>
+}
+<style>
+	#my-div {
+		display: none;
+		background-color: white;
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		color: black;
+		padding: 15px 25px;
+		border-radius: 8px;
+		border: 5px solid black;
+		box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+		font-family: sans-serif;
+		z-index: 9999;
+	}
+</style>
